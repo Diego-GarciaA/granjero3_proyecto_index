@@ -1,0 +1,229 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* HEADER */
+
+.header{
+    background:#1f4d2e;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h1{
+    font-size:32px;
+    font-weight:bold;
+}
+
+/* MENÚ */
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.menu li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.menu li a:hover{
+    color:#ffc107;
+}
+
+/* HERO */
+
+.hero{
+    background:url('../img/fondos/granja.jpg');
+    background-size:cover;
+    background-position:center;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-content{
+    text-align:center;
+    color:white;
+    max-width:700px;
+}
+
+.hero-content h2{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+/* BOTÓN */
+
+.btn-warning{
+    padding:12px 30px;
+    font-size:18px;
+}
+
+/* NOSOTROS */
+
+#nosotros{
+    background:white;
+}
+
+#nosotros h2{
+    margin-bottom:20px;
+    color:#1f4d2e;
+}
+
+.horarios{
+    background:#f0f0f0;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+/* PRODUCTOS */
+#productos{
+    background:#eef3ee;
+    padding:60px 0;
+}
+
+.productos-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.producto-card{
+    width:300px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    transition:.3s;
+    text-align:center;
+}
+
+.producto-card:hover{
+    transform:translateY(-5px);
+}
+
+.producto-card img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    padding:10px;
+}
+
+.producto-card h3{
+    color:#1f4d2e;
+    margin-top:10px;
+}
+
+.producto-card .precio{
+    color:#28a745;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.producto-card p{
+    padding:10px;
+    font-size:14px;
+}
+
+/* CONTACTO */
+
+.contacto{
+    background:white;
+}
+
+.contacto h2{
+    color:#1f4d2e;
+}
+
+form{
+    background:#f9f9f9;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+
+.footer{
+    background:#1f4d2e;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+    }
+
+    .menu{
+        flex-direction:column;
+        margin-top:20px;
+    }
+
+    .hero-content h2{
+        font-size:35px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+}
+@media(max-width:992px){
+
+    .productos-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:576px){
+
+    .productos-grid{
+        grid-template-columns:1fr;
+    }
+
+}
